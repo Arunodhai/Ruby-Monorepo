@@ -16,3 +16,5 @@ gem 'simplecov', '0.22.0'
 gem 'test-unit', '3.6.2'
 gem 'timecop', '0.9.10'
 gem 'yard', '0.9.36'
+
+gem 'puma', '~> 6.4.2'
