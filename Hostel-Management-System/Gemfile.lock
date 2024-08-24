@@ -103,7 +103,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.6.3)
@@ -151,14 +150,16 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.9-arm64-darwin)
+    nokogiri (1.16.7-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.9-x64-mingw-ucrt)
+    nokogiri (1.16.7-x64-mingw-ucrt)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
-    racc (1.6.0)
+    racc (1.8.1)
     rack (2.2.4)
     rack-proxy (0.7.4)
       rack
@@ -194,11 +195,11 @@ GEM
     regexp_parser (2.6.0)
     reline (0.3.1)
       io-console (~> 0.5)
-    rexml (3.2.5)
+    rexml (3.3.6)
+      strscan
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
-    selenium-webdriver (4.6.1)
-      childprocess (>= 0.5, < 5.0)
+    selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -212,8 +213,10 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.5.3-arm64-darwin)
     sqlite3 (1.5.3-x64-mingw-ucrt)
+    sqlite3 (1.5.3-x86_64-linux)
     stimulus-rails (1.1.1)
       railties (>= 6.0.0)
+    strscan (3.1.0)
     thor (1.2.1)
     timeout (0.3.0)
     turbo-rails (1.3.2)
@@ -233,16 +236,16 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (5.2.0)
+    webdrivers (5.3.1)
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
-      selenium-webdriver (~> 4.0)
+      selenium-webdriver (~> 4.0, < 4.11)
     webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
       semantic_range (>= 2.3.0)
-    websocket (1.2.9)
+    websocket (1.2.11)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -253,6 +256,7 @@ GEM
 PLATFORMS
   arm64-darwin-22
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   active_storage_validations
@@ -266,7 +270,7 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.4)
-  selenium-webdriver
+  selenium-webdriver (>= 4.7.0)
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
@@ -274,11 +278,11 @@ DEPENDENCIES
   twilio-ruby
   tzinfo-data (~> 1.2021, >= 1.2021.5)
   web-console
-  webdrivers
+  webdrivers (>= 5.3.0)
   webpacker
 
 RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.7
+   2.3.26
